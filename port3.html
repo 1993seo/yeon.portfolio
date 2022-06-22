@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022 SY's Portfolio</title>
+    <link rel="stylesheet" href="port3.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+</head>
+<body>
+    <div class="nav">
+        <nav role="navigation">
+            <div id="menuToggle">
+              
+              <input type="checkbox" /> 
+              
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <ul id="menu">
+                <a href="port.html"><li><img src="home.png"></li></a>
+                <a href="port2.html"><li>ABOUT</li></a>
+                <a href="port3.html"><li>WORK</li></a>
+                <a href="port4.html"><li>CONTACT</li></a>
+              </ul>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <div class="title">
+            WORK
+        </div>
+        <section class="workitem">
+            <div class="slide">
+                <div class="slickslide">
+                    <div class="slick one">
+                        <div class="page">
+                            <img src="hony2.jpg"></div>
+                        <button id="toggle1">더보기</button>
+                        
+                            <p>상세페이지</p>
+                            <p>블라인드 쇼핑몰에서 근무하며 작업한 작업물들입니다.</p>
+                        </label>
+                    </div>
+                    <div class="slick two">
+                        <div class="page">
+                            <img src="book.jpg"></div>
+                        <button id="toggle2">더보기</button>
+                        
+                        <p>책자 및 전단 설명서</p>
+                        <p>실제 홍보용 책자와 판매된 상품에 사용된 설명서입니다.</p>
+                        </label>
+
+                    </div>
+                    <div class="slick three">
+                        <div class="page">
+                            <img src="beam.jpg"></div>
+                        <button id="toggle3">더보기</button>
+                        <p>합성</p>
+                        <p>상세페이지와 책자에 사용된 합성 이미지들입니다.</p>
+                        </label>
+
+                    </div>
+                    <div class="slick four">
+                        <div class="page">
+                            <img src="logo.jpg"></div>
+                        <button id="toggle4">더보기</button>
+                        <p>로고 및 명함</p>
+                        <p>블라인드 모양을 본따 만든 쇼핑몰 로고와 이를 사용한 명함 작업물등입니다.</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="previous"></div>
+                <div class="next"></div>
+            </div>
+        </section>
+        <div class="pop-up">
+            <div class="close">X</div>
+            <div class="modal hidden1">
+                <img src="1상세페이지완.jpg">
+            </div>
+            <div class="modal hidden2">
+                <img src="3책자전단.jpg">
+            </div>
+            <div class="modal hidden3">
+                <img src="4합성페이지.jpg">
+            </div>
+            <div class="modal hidden4"><img src="2로고명함완.jpg"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.slickslide').slick({
+        infinite: true,
+        centerMode:true,
+        centerPadding:'240px',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        prevArrow : $('.previous'),        
+        nextArrow : $('.next'),
+        })
+
+
+        const popup = document.querySelector('.pop-up');
+        const btn1 = document.querySelector('#toggle1');
+        const btn2 = document.querySelector('#toggle2');
+        const btn3 = document.querySelector('#toggle3');
+        const btn4 = document.querySelector('#toggle4');
+        const close = document.querySelector('.close');
+        const hdn1 = document.querySelector('.hidden1');
+        const hdn2 = document.querySelector('.hidden2');
+        const hdn3 = document.querySelector('.hidden3');
+        const hdn4 = document.querySelector('.hidden4');
+
+        btn1.addEventListener('click', () => {
+        popup.style.display = 'block';
+        hdn1.style.display = 'block';
+        hdn2.style.display = 'none';hdn3.style.display = 'none';hdn4.style.display = 'none';
+        });
+        btn2.addEventListener('click', () => {
+        popup.style.display = 'block';
+        hdn2.style.display = 'block';
+        hdn1.style.display = 'none';hdn3.style.display = 'none';hdn4.style.display = 'none';
+        });
+        btn3.addEventListener('click', () => {
+        popup.style.display = 'block';
+        hdn3.style.display = 'block';
+        hdn1.style.display = 'none';hdn2.style.display = 'none';hdn4.style.display = 'none';
+        });
+        btn4.addEventListener('click', () => {
+        popup.style.display = 'block';
+        hdn4.style.display = 'block';
+        hdn1.style.display = 'none';hdn2.style.display = 'none';hdn3.style.display = 'none';
+        });
+        close.addEventListener('click', () => {
+        popup.style.display = 'none';
+        });
+
+   </script>
+
+</body>
+</html>
